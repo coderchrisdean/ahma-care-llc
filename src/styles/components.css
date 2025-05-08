@@ -1,0 +1,113 @@
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply inline-block font-semibold transition-all transform hover:scale-105 hover:shadow-lg duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 text-white py-3 px-8 hover:bg-blue-700 shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-green-400 text-blue-800 py-3 px-8 hover:bg-green-500 shadow-md;
+  }
+  
+  .btn-rounded {
+    @apply rounded-full;
+  }
+  
+  .btn-rounded-special {
+    border-radius: 24px 24px 24px 0;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply font-medium relative;
+  }
+  
+  .nav-link::after {
+    @apply absolute left-0 bottom-0 w-0 h-0.5 bg-green-400 transition-all duration-300 content-[''];
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  /* Cards */
+  .card {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl;
+  }
+  
+  .card-hover {
+    @apply transform hover:-translate-y-2;
+  }
+  
+  /* Badges */
+  .badge {
+    @apply inline-block py-1 px-3 rounded-full text-sm font-bold;
+  }
+  
+  .badge-primary {
+    @apply bg-blue-100 text-blue-600;
+  }
+  
+  .badge-secondary {
+    @apply bg-green-100 text-green-600;
+  }
+  
+  /* Lists */
+  .feature-list {
+    @apply grid grid-cols-1 gap-y-1;
+  }
+  
+  .feature-list-item {
+    @apply flex items-center text-sm text-gray-600;
+  }
+  
+  .feature-bullet {
+    @apply w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0;
+  }
+  
+  /* Headers */
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-blue-600 mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-lg text-gray-700 max-w-3xl mx-auto;
+  }
+  
+  .section-divider {
+    @apply w-24 h-1 bg-green-400 mx-auto mb-6;
+  }
+  
+  /* Inputs */
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-colors;
+  }
+  
+  .form-label {
+    @apply block text-gray-700 font-medium mb-2;
+  }
+  
+  /* Info boxes */
+  .info-box {
+    @apply flex items-start;
+  }
+  
+  .info-icon-container {
+    @apply bg-blue-500 p-3 rounded-full mr-4;
+  }
+  
+  .info-content {
+    @apply flex flex-col;
+  }
+  
+  .info-title {
+    @apply font-semibold mb-1;
+  }
+  
+  .info-subtitle {
+    @apply text-sm text-blue-200 mt-1;
+  }
+}
